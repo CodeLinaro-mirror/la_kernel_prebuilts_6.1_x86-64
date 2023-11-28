@@ -13,3 +13,11 @@ filegroup {
     name: "microdroid_gki_kernel_prebuilts-6.1-x86_64",
     srcs: ["kernel-6.1"],
 }
+
+android_filesystem {
+    name: "microdroid_gki_modules-6.1-x86_64",
+    deps: [
+        "microdroid_gki_kernel_modules-6.1-x86_64",
+    ],
+    type: "compressed_cpio",
+}
