@@ -4,7 +4,16 @@ package {
 
 prebuilt_kernel_modules {
     name: "microdroid_gki_kernel_modules-6.1-x86_64",
-    srcs: ["zram.ko", "zsmalloc.ko"],
+    srcs: [
+        "vcpu_stall_detector.ko",
+        "virtio-rng.ko",
+        "virtio_balloon.ko",
+        "virtio_blk.ko",
+        "virtio_console.ko",
+        "vmw_vsock_virtio_transport.ko",
+        "zram.ko",
+        "zsmalloc.ko",
+    ],
     kernel_version: "6.1",
     installable: false,
 }
